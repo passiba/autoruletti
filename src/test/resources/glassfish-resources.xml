@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resources PUBLIC
+    "-//GlassFish.org//DTD GlassFish Application Server 3.1 Resource Definitions//EN"
+    "http://glassfish.org/dtds/glassfish-resources_1_5.dtd">
+<resources>
+    <jdbc-resource pool-name="	
+MySqlDriverPool" jndi-name="	
+MySqlDriverDS"/>
+    <jdbc-connection-pool name="MySqlDriverPool"
+        res-type="java.sql.Driver"
+        datasource-classname="com.mysql.jdbc.Driver"
+        is-isolation-level-guaranteed="false">
+        <property name="databaseName" value="target/databases/mysql"/>
+        <property name="createDatabase" value="create"/>
+    </jdbc-connection-pool>
+</resources>
